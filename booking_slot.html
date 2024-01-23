@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="xyz.css">
+    <title>Booking</title>
+</head>
+
+<body style="box-sizing: border-box; padding: 0; margin: 0;">
+    <main>
+        <div style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;" class="">
+            <!-- contact_container_1 -->
+            <div class="contact-box">
+                    <h2 class="contact-heading">Booking</h2>
+                <form>
+                    <label for="">Customer name <span style="color: red; font-size: 17px;"> *</span></label>
+                    <input type="text" class="input-field" id="uname" placeholder="Enter Name ">
+                    <label for="">From <span style="color: red; font-size: 17px;"> *</span></label>
+                    <input class="input-field"  placeholder="From" type="date" name="" id="date_1">
+                    <label for="">To <span style="color: red; font-size: 17px;"> *</span></label>
+                    <input class="input-field" placeholder="To" id="date_2" type="date" name="" id="">
+                    <label for="">Mobile <span style="color: red; font-size: 17px;"> *</span></label>
+                    <input type="number" class="input-field" id="mobile" placeholder="Enter mobile no.">
+                    <div id="booking_confirm">
+                        <p id="success_conf">Your booking will confirm soon !, Thanks !!</p>
+                        <p id="not_conf">
+                            All fields are mandatory
+                        </p>
+                    </div>
+<button class="contact-btn" id="sumit" onclick="return false">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+
+            let success_conf = document.getElementById("success_conf");
+            let not_conf = document.getElementById("not_conf");
+            let username = document.getElementById("uname");
+            let mobile = document.getElementById("mobile");
+            let date_1 = document.getElementById("date_1");
+            let date_2 = document.getElementById("date_2");
+            let sumit  = document.getElementById("sumit");
+        
+        
+        sumit.addEventListener("click", function(){
+        
+            if(username.value == '' || mobile.value == ''){
+               not_conf.style.display = 'block';
+            }
+            else if(date_2.value < date_1.value){
+alert("Invalid Date selection")
+not_conf.style.display = 'block';
+            }
+            else if (mobile.value.length <10 || mobile.value.length>10){
+                alert("mobile no. should be in 10 digits only");
+            }
+            else{
+                success_conf.style.display = 'block';
+             
+            }
+            setTimeout(() => {
+    not_conf.style.display = "none";
+    success_conf.style.display = "none";
+  }, 5000);
+        })
+        
+        </script>
+</body>
+
+
+
+</html>

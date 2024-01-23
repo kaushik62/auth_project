@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="xyz.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="responsive.css">
+<title>Hotel Booking</title>
+
+</head>
+
+<body style="scroll-behavior: smooth;"></body>
+<label id="side_navbar">
+    <input class="checkbox_input" type="checkbox">
+    <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+    </div>
+    <div class="slide">
+        <h4>My Projects</h4>
+        <ul>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <hr>
+            <hr>
+            <li><i class="slide_icon fa-solid fa-user"></i><a href="https://myportfolio999.netlify.app/">My
+                    Portfolio</a></li>
+            <li><i class="slide_icon fa-solid fa-calculator"></i><a
+                    href="https://mycalculator99.netlify.app/">Calculator</a></li>
+            <li><i class="slide_icon fa-solid fa-clock"></i><a href="https://clock99.netlify.app/">Clock</a></li>
+            <li><i class="slide_icon fa-solid fa-temperature-three-quarters"></i><a
+                    href="https://temperatureconverter9977.netlify.app/">Temperature Converter</a></li>
+            <li><i class="slide_icon fa-solid fa-pen-to-square"></i><a href="https://todolist99.netlify.app/">To do
+                    List</a></li>
+            <li><i class="slide_icon fa-solid fa-eye-dropper"></i><a href="https://colorpicker99.netlify.app/">Color
+                    Picker</a></li>
+            <li><i class="slide_icon fa-solid fa-cart-shopping"></i><a href="https://amazonclone99.netlify.app/">Amazon
+                    Clone</a></li>
+        </ul>
+
+    </div>
+</label>
+
+<header>
+    <div id="navbar">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
+            <li class="nav-li"><a class="nav-a" href="gallary.html">Gallary</a></li>
+            <li class="nav-li"><a class="nav-a" href="about.html">About Us</a></li>
+            <li class="nav-li"><a class="nav-a" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- //* sign out -->
+
+<button id="sign_out_btn"><i id="signout_icon" class="fa-solid fa-power-off"></i>Sign out</button>
+
+<!-- //* sign in -->
+
+<button onclick="show_signin()" id="sign_in_btn"><i id="signout_icon" class="fa-solid fa-power-off"></i>Login</button>
+
+<!-- //* sign up -->
+
+<button onclick="show_signup()" id="sign_up_btn"><i id="signout_icon" class="fa-solid fa-power-off">
+    </i>sign up</button>
+
+<!--todo front page -->
+
+<div class="front_page">
+    <h1>Stay once, carry memories forever ...</h1>
+
+    <h5>The perfect place for getaways! Merge yourself with luxury</h5>
+
+    <a href="booking_slot.html"><button>Book a slot</button></a>
+
+</div>
+
+
+<!--todo login -->
+
+<!-- sign up -->
+
+<div class="popup_signin" id="popup_signup">
+    <div class="form_container">
+        <h3>Signup</h3>
+        <p>Name</p>
+        <input type="text" id="username" placeholder="Enter name" />
+        <p>Email</p>
+        <input type="email" placeholder="Enter email" name="email" id="email" />
+        <p>Password</p>
+        <input type="password" placeholder="Enter above 6 digits password" name="password" id="password" />
+        <p style="font-size: 19px" class="para_danger">
+            All fields are mandatory <br> <span style="font-size: 15px; color: steelblue; ">( or user already registered )</span>
+        </p>
+        <p style="font-size: 19px" class="para_success">
+            You are registered successfully
+        </p>
+        <button value="1" type="submit" name="signup" id="signup" class="register" onclick="signup()">
+            Sign up
+        </button>
+        <p style="text-align: center; font-size: 17px">--------------------------- or --------------------------</p>
+        <button value="2" id="google_signup">
+            <img src="Image/goolge.webp" alt="" />Sign up with Google
+        </button>
+    </div>
+</div>
+<!-- //* sign in -->
+
+<div class="popup_signin" id="popup_signin">
+    <div class="form_container">
+        <h3>Login</h3>
+        <p>Email</p>
+        <input type="email" placeholder="Enter email" name="email" id="email_1" />
+        <p>Password</p>
+        <input type="password" placeholder="Enter password" name="password" id="password_1" />
+        <p id="logged_successfully">Logged Successfully</p>
+        <p id="incorrect_user">Incorrect email or password</p>
+
+        <button type="submit" id="login" onclick="login()">Login</button>
+        <p style="text-align: center; font-size: 17px">--------------------------- or
+            --------------------------
+        </p>
+        <button value="2" class="google_signup_2" id="google_signup">
+            <img src="Image/goolge.webp" alt="" />Sign in with Google
+        </button>
+    </div>
+</div>
+
+<!-- todo choose us -->
+
+<div class="choose_container_outer">
+    <h2>Why you choose us !</h2>
+    <div class="choose_container">
+        <div>
+            <img class="choose_icon" src="Image/14.jpg" alt="">
+            <h6>Value of Money</h6>
+        </div>
+        <div>
+            <img class="choose_icon" src="Image/18.png" alt="">
+            <h6>Best Offer</h6>
+        </div>
+        <div>
+            <img class="choose_icon" src="Image/19.png" alt="">
+            <h6>Top location</h6>
+        </div>
+        <div>
+            <img class="choose_icon" src="Image/16.jpg" alt="">
+            <h6>Top feedback</h6>
+        </div>
+    </div>
+</div>
+
+<!--todo Our Rooms -->
+
+<div id="our_rooms" class="room_container_area">
+    <h1 class="room_heading">
+        Our Rooms
+    </h1>
+    <div class="room_container">
+        <img class="rooms" id="room_1" src="Image/4.jpg" alt="">
+        <img class="rooms" id="room_1" src="Image/7.jpg" alt="">
+        <img class="rooms" id="room_1" src="Image/8.jpg" alt="">
+        <img class="rooms" id="room_1" src="Image/22.jpg" alt="">
+        <img class="rooms" id="room_1" src="Image/24.jpg" alt="">
+        <img class="rooms" id="room_1" src="Image/1.jpg" alt="">
+    </div>
+</div>
+
+<!-- todo Profile -->
+
+<div class="outer_profile_container">
+    <h2>Our Team Member</h2>
+    <div class="profile_container">
+        <div class="member_details"><img style="border: 5px solid black
+    ;" class="img_style" src="Image/20.png" alt="">
+            <h3>Member 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eius.</p>
+        </div>
+        <div class="member_details"><img style="border: 5px solid black
+        ;" class="img_style" src="Image/20.png" alt="">
+            <h3>Member 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eius.</p>
+        </div>
+        <div class="member_details"><img class="img_style" src="Image/21.webp" alt="">
+            <h3>Member 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eius.</p>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+    <div id="footer-area">
+        <div class="footer-col">
+            <h2 class="star_5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </h2>
+            <h2 class="footer-logo">5 Star Hotel</h2>
+            <p class="company-add"><i class="fa-solid fa-location-dot"></i>Company Address</p>
+        </div>
+        <div class="footer-col">
+            <h2 id="heading-col">Get to Know Us</h2>
+            <ul>
+                <li><a href="gallary.html">Gallery</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+
+            <h2 id="heading-col">Connect with Us</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/kaushik-kumar-gupta/">Linkedin</a></li>
+                <li><a href="#">Facebook</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="copy-right-area">
+        <p class="copy-right-text" style="color: white;">Made by Kaushik Gupta
+        </p>
+    </div>
+
+</footer>
+
+<!--todo firebase -->
+
+<script src="index.js"></script>
+<script type="module" src="apiscript.js"></script>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_q2uvFfJtYtn-CFmS3YMeI_X_U0byz6I",
+      authDomain: "project-auth-e65a5.firebaseapp.com",
+      databaseURL: "https://project-auth-e65a5-default-rtdb.firebaseio.com",
+      projectId: "project-auth-e65a5",
+      storageBucket: "project-auth-e65a5.appspot.com",
+      messagingSenderId: "738281884617",
+      appId: "1:738281884617:web:911b9437a2314ca1db3618"
+    };
+    
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+
+//  signup with email
+
+let para_danger = document.querySelector(".para_danger");
+let para_success = document.querySelector(".para_success");
+document.querySelector(".register").addEventListener("click", function(){
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    console.log(user);
+    para_success.style.display = "block";
+    // alert("Registration successful")
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 1000);
+
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage)
+    // alert(error);
+    para_danger.style.display = "block";
+    // ..
+  });
+})
+
+
+  </script>
+
+</body>
+</html>
